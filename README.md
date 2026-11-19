@@ -1,16 +1,10 @@
-# Frazer's Game Boilerplate
+# Steal Treasure from Dragons
 
-I made this boilerplate/template because I'm tired of people not using AI correctly to make Roblox games.
+Roblox game by Sciyth Studio, built on [roblox-game-boilerplate](https://github.com/frrazer/roblox-game-boilerplate).
 
-Ask your agent to set up the boilerplate by running the install scripts, and the rest is easy!
+```powershell
+./scripts/install.ps1
+rojo serve default.project.json --address 127.0.0.1
+```
 
-<details>
-<summary>For AI agents:</summary>
-
-If you're an agent, please refer to [AGENTS.md](/AGENTS.md) before making any code changes or install scripts.
-
-</details>
-
-## License
-
-Public domain under [the Unlicense](/LICENSE): do whatever you want with it. Vendored and package dependencies (`vendor/Replica`, `Packages`, `ServerPackages`) keep their own licenses.
+Connect the Rojo plugin in Studio to `localhost:34880`. See `AGENTS.md` for project rules and `Vault/Index.md` for the knowledge base.

@@ -1,4 +1,4 @@
-# Game Boilerplate — agent instructions
+# Steal Treasure from Dragons — agent instructions
 
 ## Code style
 
@@ -41,9 +41,9 @@ rojo serve default.project.json --address 127.0.0.1
 ```
 
 - `scripts/install.ps1` installs the tools, downloads the Roblox type definitions (`globalTypes.d.luau`, Git-ignored) if missing, runs `wally install`, then `wally-package-types` so package types (such as `Signal.Signal<T...>`) are visible to strict code. Run it on a fresh clone and after changing `wally.toml`; never run bare `wally install`. On first run Aftman may ask the user to trust each tool.
-- Connect the Rojo plugin in Studio to `localhost:34873`. Once the game has a place, add `"servePlaceIds": [<placeId>]` to `default.project.json`.
+- Connect the Rojo plugin in Studio to `localhost:34880`. Once the game has a place, add `"servePlaceIds": [<placeId>]` to `default.project.json`.
 - In Studio, enable **Game Settings > Security > Enable Studio Access to API Services** (the place must be published). Without it (or in an unpublished place), ProfileStore falls back to in-memory mock data: everything works, but data resets when Play stops, and `DataService` warns once. Live servers always have DataStore access.
-- In Play, output shows `[Game Boilerplate] Server services ready`, `Client controllers ready` and a Packet round trip. Both Bootstraps set a `Ready` attribute.
+- In Play, output shows `[Steal Treasure from Dragons] Server services ready`, `Client controllers ready` and a Packet round trip. Both Bootstraps set a `Ready` attribute.
 - `./scripts/check.ps1` is the one command to run after every change. It formats `src` with StyLua, regenerates the sourcemap, runs luau-lsp type and lint analysis, and does a Rojo build. Fix every error it reports and rerun it until it passes.
 - `rojo build` output is code-only, not a replacement for the authored place.
 
@@ -57,6 +57,7 @@ rojo serve default.project.json --address 127.0.0.1
 | `Packages` | `ReplicatedStorage.Packages` | Generated Wally dependencies |
 | `ServerPackages` | `ServerScriptService.ServerPackages` | Generated server-only Wally dependencies |
 | `vendor/Replica` | `ReplicatedStorage.ReplicaClient`, `ReplicatedStorage.ReplicaShared`, `ServerScriptService.ReplicaServer` | Vendored Replica (see Packages) |
+| `vendor/RobloxVFX` | `ReplicatedStorage.VFX` (`Emit`, `Build`, `Capture`, `Shapes`) | Vendored VFX runtime from the `roblox-vfx` skill, MIT (see `vendor/RobloxVFX/README.md` and the `vfx` skill) |
 
 - Edit code on disk; Rojo syncs it. Code lives directly in the service roots, with no Client/Server/Shared wrapper folders.
 - Rojo owns mapped folders. Unknown children at service roots are preserved. Workspace, lighting, GUI and other art are edited and saved in Studio, not on disk.
@@ -374,3 +375,11 @@ Replica ([MadStudioRoblox/Replica](https://github.com/MadStudioRoblox/Replica)) 
 - Prompt purchases from the client with `MarketplaceService:PromptProductPurchase(player, productId)`; never grant from a client request.
 - Game passes are not receipts: check ownership with `MarketplaceService:UserOwnsGamePassAsync` on the server (and on `PromptGamePassPurchaseFinished`), not in `Products`.
 - The last 100 receipt IDs are kept per player.
+
+## Project rules (Steal Treasure from Dragons)
+
+- Before committing, run `./scripts/check.ps1` and fix everything it reports. Commit only when the user asks. End every commit message with the co-author line the session provides.
+- `origin` is this game's repository (`Sciyth-Studio/Steal-Treasure-from-Dragons`). `upstream` is the boilerplate repository; never push to it. Push to `origin` only when the user asks.
+- Player-facing changes (prices, rates, thresholds, visuals, wording) are proposed to the user before they are committed as final; drafted numbers are flagged as drafts.
+- Studio edits (UI, maps, assets) are not in git. Stop Play before editing Studio, wait for Rojo to sync before playing, and remind the user to save the place file.
+- Tunable constants go in `src/shared/Config`; add a config entry instead of hardcoding a number.

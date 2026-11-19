@@ -1,0 +1,207 @@
+# VFX lessons
+
+Rules the user has taught about effects, each with the moment behind it. Newest
+at the bottom. These win over the references when they disagree. Add one entry
+per piece of feedback: the rule, then **Why** (what happened) and **How to
+apply**. Entries 2-12 carry over from the earlier vfx skill (2026-10-07 to
+2026-10-10).
+
+## 1. Actual VFX, never 3D objects
+
+Build effects from ParticleEmitters, Beams and Trails with textures. Never
+from 3D objects such as sphere or ball-cluster "puffs".
+
+**Why:** after a "flat, terrible coloring" complaint on a strategy game's
+explosions, they were remade as shaded 3D ball clusters, and those were rejected
+too: they read as 3D objects, not effects. (From the upstream skill.)
+
+**How to apply:** fix flatness with particle technique instead:
+- layered flipbook emitters with offset spawn shapes, random rotation and
+  staggered `EmitDelay`;
+- colour and size sequences; a dark layer or black twin for value
+  (`vfx-design.md` §3);
+- soft opaque smoke textures at `LightInfluence` 1 so the scene shades them;
+- warm colour ramps, and smoke beside fire carrying the fire's colour.
+
+## 2. Chop a Rock is smooth cartoon
+
+The art direction (Master Game Plan §03) is smooth cartoon, bright and
+saturated (vault [[High Saturation Colors]]).
+
+**Why:** the game's look; mottled, gritty smoke fights it.
+
+**How to apply:** lean toward clean cel shapes and saturated energy. Use
+mottled, heavy smoke only when the user asks for weight.
+
+## 3. This place blows out warm additive layers
+
+**Why:** on this place (bloom threshold 2, saturated colour correction, bright
+sky and floor), additive gold layers at Brightness 4-6 summed into a white blob
+(2026-10-07, VFX_LevelUp; again on the Dragon aura 2026-10-09).
+
+**How to apply:** read `Lighting`'s `BloomEffect` before picking Brightness.
+Rings and pillars read well at Brightness 1.4-2.5 with `LightEmission`
+0.15-0.3; glints and dots hold up at 3-4. Saturated mid-luminance colours (blue,
+purple) take Brightness 5-10 at `LightEmission` 1; white, yellow and gold
+don't. Painted, shaded textures (cel fire, smoke) go at `LightEmission` 0 with
+Brightness about 4. Tiny sparks can go very bright (the reference explosion's
+specks run at 500).
+
+## 4. An aura goes around the body
+
+**Why:** an aura made only from a ground layer lacked substance (2026-10-10).
+
+**How to apply:** wrap the character in layers (`references/studied.md`, body
+auras):
+- **Rear flames:** big upright flames (`FacingCameraWorldUp`, a 4x4 fire
+  sheet) rising from 3-4 attachments just inside the feet, Size about 3-4,
+  `ZOffset` -1.5 to -2 so the body covers their middle and they frame it.
+- **Spiral ribbons:** 2-3 orbiting attachment pairs (250-420° a second, radius
+  1.6-2, spread over the body's height) with Trails 0.3-0.55 s long and about
+  0.6 studs wide, Transparency starting at 0 or they vanish on a bright floor.
+- **A wrapping texture on the body:** electric arcs with a flicker curve, or a
+  camera-facing swirl ring, as an emitter directly on the body part.
+- **Rising streaks** (`VelocityParallel`) from a ring at the feet; flames that
+  shoot up and stop (Speed 8-25, Drag 5, `Squash` 0 to 0.4).
+- **Fizz:** tiny dots at a high rate on each limb make the body crackle.
+
+## 5. No detailed ground circle under an aura
+
+**Why:** "there's enough going on" (2026-10-10).
+
+**How to apply:** a soft flat ground glow or rising streaks from the feet are
+enough.
+
+## 6. Darkness through black twins, not a dark blob
+
+**Why:** the user asked for darkness on the Spirit aura, then rejected a solid
+dark-energy blob over the body (2026-10-10), even though the reference
+PurpleEnergyAura uses one.
+
+**How to apply:** black twins of flames and streaks (`LightEmission` 0, a
+`ZOffset` step behind, a little bigger), so dark tongues lick up between the
+coloured ones.
+
+## 7. Electric auras use fine lines
+
+**Why:** chunky bolt sprites and big beams read as cartoon and were rejected
+(2026-10-10).
+
+**How to apply:** many thin hairline lightning snaps hugging every body part
+(Size about 2.7 to 0.6 to 2.1, Lifetime 0.2-0.3, not locked to the part).
+
+## 8. One hero layer
+
+**Why:** a Thunder aura with snaps, flashes, a shockwave, arcs and bolts all at
+once was "too many competing particle effects" (2026-10-10).
+
+**How to apply:** pick the single element the effect is about (Thunder's
+scrolling bolts, Spirit's rising flame column) and keep everything else small
+and sparse. Keep stacked additive layers in check: carry substance with shaped
+textures, not glow (Spirit 2026-10-09).
+
+## 9. Detailed textures over many layers
+
+**Why:** the user's reference effects (`studied.md`) use 3-7 layers, each a
+detailed painted texture; our 2026-10-09 auras had 15+ layers of simple shapes
+and looked worse than a three-layer magic circle.
+
+**How to apply:** before drawing, list the 3-6 sub-shapes inside each texture
+(bands, glyphs, spokes, several tapered strokes, painted inner tongues). If an
+effect needs more than about 8 layers to look busy, draw a better texture
+instead of adding layers. Ground and ring textures need structure all the way
+round (ticks, runes, notches, inner and outer bands, broken arcs); a plain soft
+ring reads as a halo.
+
+## 10. Tint only greyscale textures
+
+**Why:** magenta over a reference fire sheet with orange baked in rendered red
+(2026-10-10).
+
+**How to apply:** `Color` multiplies the texture. Check that a borrowed texture
+is greyscale before tinting it to another hue (`studied.md` lists the baked
+ones). Tiers of a set differ in silhouette and motion, not only colour.
+
+## 11. Beam textures run vertically
+
+**Why:** a pillar drawn with its bright core along X showed nothing
+(2026-10-10).
+
+**How to apply:** on a Beam or Trail the image's Y axis runs along its length
+and X across its width; draw the core as a vertical line (`vfx-motion.md`).
+
+## 12. `VelocityPerpendicular` at Speed 0 vanishes on a moving part
+
+**Why:** ground rings at Speed 0 drew nothing on the aura walkers
+(2026-10-10), though Speed 0 works on a static part (the reference aura).
+
+**How to apply:** always give flat sprites Speed 0.001.
+
+## 13. Electric effects need a glow
+
+**Why:** the first Zappy Pet effect (yellow hairline snaps and a crackle
+ring, no glow) "looks relatively boring, he could use a glow" (2026-10-15).
+
+**How to apply:** give lightning and electric effects a soft glow behind them
+(a soft round glow sprite at `ZOffset` -1 with a flickering Transparency
+curve) and a small PointLight in the same colour, with the snaps at
+`LightEmission` 1. Yellow glows blow out here (entry 3): keep a yellow glow
+small (about the size of the object) at Brightness under 1.
+
+## 14. Storm skies go properly dark
+
+**Why:** the Hurricane's pale grey cloud ceiling and lighting look were "not
+dark enough" (2026-10-15).
+
+**How to apply:** for storm weather, darken both the event's lighting look
+(Lighting Brightness about 1.8, a dim OutdoorAmbient, a dark Atmosphere
+Decay) and the cloud layer (near-black blue-grey, Transparency about 0.15).
+Particles alone can't darken the skybox.
+
+## 15. A new event gets its own effects, not borrowed ones
+
+**Why:** the first Geode Fall reused the cannon trail and cannon landing plus a
+neon cylinder beacon and a flat neon disc marker; the user called the VFX
+"lacking" (2026-10-20). It was remade as four of its own templates around one
+hero beat (the meteor impact) the user picked.
+
+**How to apply:** for a new event or reward moment, ask which beat is the hero
+and the palette first, then build that beat's own template. Borrowed effects and
+plain Neon parts (beacons, discs) are placeholders only. A beacon is a textured
+Beam pillar, not a Neon cylinder.
+
+## 16. The Diamond's STAR flash texture is a scatter of stars
+
+**Why:** on the Colossus (2026-11-10), `rbxassetid://97917584432190` used as a 100-stud flash showed as several spiky, clip-art white stars spread over the screen, not one flare.
+
+**How to apply:** for a big flash, use a soft glow in white (131288307457982) or a single flare from the kit; keep 97917584432190 small (under about 20 studs).
+
+## 17. Two crescents crossed at ±45° read as a ring
+
+**Why:** the first Perfect chop slash (2026-11-13) layered two outlined crescents at -45° and 45° plus a ring flash, meaning an X; frozen mid-play it read as a closed circle.
+
+**How to apply:** a slash is one hero crescent. Add a thinner, plainer crescent at a nearby angle (about 20° off) as a speed line, not a mirrored one, and skip ring layers on slashes.
+
+## 18. A chop slash follows the cut, not the impact point
+
+**Why:** the user (2026-11-13) wanted the slash to "apply in a straight line down the cut where the rock" splits; a tilted crescent at the impact point didn't line up with the split halves.
+
+**How to apply:** when an effect shows a cut, draw it along the real cut geometry (here a vertical Beam spindle on the `LiveSplit` plane, top to bottom), and hold the split until the line is drawn. Hits that don't split get a short nick on the same line.
+
+## 19. Don't rely on Beam `ZOffset` for a black twin over a textured beam
+
+**Why:** on the chop cut line (2026-11-13) a black outline spindle behind the white core drew correctly while every layer was untextured, but once the glow got a texture the black drew in front of the core whatever the `ZOffset`. Moving the black onto attachments set physically behind made it vanish head-on and slide sideways at an angle.
+
+**How to apply:** for a beam effect, get value from the textures (a streaky glow, a streak bundle) instead of a black twin beam. If an outline is needed, bake it into one texture (like the outlined crescent K0663) rather than layering a separate black beam.
+
+## 20. A black twin works as a particle that outlives the bright layer
+
+**Why:** the fire katana reference (2026-11-13) gets its depth from a black copy of each slash sprite that lives longer than the bright copy; as a separate Beam it had fought the bright beams for draw order (lesson 19). As a particle fired just as the bright beams start to fade (`Ghost` on the chop cut line) it reads as a dark cut left behind.
+
+**How to apply:** time the black twin to appear as the bright layer fades, not on top of it; keep it the same shape. When stretching a `FacingCamera` sprite with `Squash`, expect the height to grow by roughly 2 x (1 + squash) times the size; check it against a marker part before tuning.
+
+## 21. A rock cut lies on the ground along the split and lingers
+
+**Why:** the upright cut line was "way too short" (rocks are wide, low domes) and hidden behind the character; the user wanted it "across the length of the rock", lingering on the ground after the rock splits down the middle, then fading (2026-11-13), and picked a flat beam lying on the floor.
+
+**How to apply:** draw cuts as flat beams (`FaceCamera` false; a Beam's width runs along its attachments' Y axis, so give them a basis with X along the line and Y horizontal) on the ground through the split, running about 2.2x the object's length, and let them linger a second or two after the break before fading. Test a new beam orientation with three coloured beams in Edit and let the user pick.
