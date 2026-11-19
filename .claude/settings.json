@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "sciyth-skills": {
+      "source": { "source": "github", "repo": "Sciyth-Studio/Sciyth-Skills" }
+    }
+  },
+  "enabledPlugins": {
+    "roblox-dev@sciyth-skills": true
+  }
+}

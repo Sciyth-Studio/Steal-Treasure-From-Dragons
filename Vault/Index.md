@@ -12,7 +12,7 @@ What Claude has learned while working on the game: preferences, references, gotc
 - Update an existing note rather than adding a duplicate. Delete notes that turn out to be wrong.
 - Images live in `Attachments/`. Every image is embedded in a note that says what to take from it.
 - Keep [[To Do]] current: remove items once done and checked in code, add new ones when the user approves work.
-- Procedures belong in skills (`.claude/skills/`), not here: `roblox-gui`, `roblox-input`, `roblox-monetization`, `roblox-studio-mcp`, `studio-playtest`, `vfx`.
+- Procedures belong in skills, not here. Shared Roblox skills come from the `roblox-dev` plugin (repo `Sciyth-Studio/Sciyth-Skills`, enabled in `.claude/settings.json`): `roblox-gui`, `roblox-input`, `roblox-monetization`, `roblox-studio-mcp`, `studio-playtest`, `studio-ui`, `vfx`, `model-workflow`, `batch-model`, `studify`, `item-icons`. Change them in that repo, not here. Skills only this game needs go in `.claude/skills/`.
 
 ## Project
 - [[Steal Treasure from Dragons]] — what the game is, repos, design source of truth
