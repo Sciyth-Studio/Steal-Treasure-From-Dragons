@@ -379,7 +379,7 @@ Replica ([MadStudioRoblox/Replica](https://github.com/MadStudioRoblox/Replica)) 
 ## Project rules (Steal Treasure from Dragons)
 
 - Before committing, run `./scripts/check.ps1` and fix everything it reports. Commit only when the user asks. End every commit message with the co-author line the session provides.
-- `origin` is this game's repository (`Sciyth-Studio/Steal-Treasure-from-Dragons`). `upstream` is the boilerplate repository; never push to it. Push to `origin` only when the user asks.
+- `origin` is this game's repository (`Sciyth-Studio/Steal-Treasure-From-Dragons`). `upstream` is the boilerplate repository; never push to it. Push to `origin` only when the user asks.
 - Player-facing changes (prices, rates, thresholds, visuals, wording) are proposed to the user before they are committed as final; drafted numbers are flagged as drafts.
 - Studio edits (UI, maps, assets) are not in git. Stop Play before editing Studio, wait for Rojo to sync before playing, and remind the user to save the place file.
 - Tunable constants go in `src/shared/Config`; add a config entry instead of hardcoding a number.
