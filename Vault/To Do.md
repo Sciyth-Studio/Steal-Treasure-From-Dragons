@@ -8,7 +8,6 @@ Claude deletes items once they're done and verified in code, and adds new ones a
 
 ## Next
 - [ ] Write the game plan (core loop, progression, monetization) and link it from [[Steal Treasure from Dragons]]
-- [ ] Create and publish the place, then add `servePlaceIds` to `default.project.json` and note the place and universe ids
 - [ ] Enable Studio Access to API Services in Game Settings
 
 ## Waiting on the user

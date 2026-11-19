@@ -1,6 +1,7 @@
 {
   "name": "StealTreasureFromDragons",
   "servePort": 34880,
+  "servePlaceIds": [136363810791077],
   "tree": {
     "$className": "DataModel",
     "$ignoreUnknownInstances": true,
