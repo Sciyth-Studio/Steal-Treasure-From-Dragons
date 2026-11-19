@@ -1,0 +1,51 @@
+# Sand baseplate background
+
+Adapted from Chop a Rock's accepted baseplate prompt. Fresh ChatGPT chat, paste the block, attach `Reference/BaseplateBackground.webp` (the green plate) so the studs and clouds stay right. Save the keeper as `Background/SandBaseplate.webp`; the icon and thumbnail runs attach it instead of the green plate.
+
+Changes from the green plate: sand-coloured ground, and the horizon dropped to about one fifth up the frame so the sky takes most of the picture, with room for a flying dragon.
+
+```text
+Generate a single empty Roblox baseplate scene to use as a background reference for future Roblox game thumbnails and icons.
+
+THE ATTACHED IMAGE is the same scene in green. Match its stud surface, sky gradient, clouds, lighting and rendering exactly. Change only two things: the ground colour (sand instead of green) and the camera framing (the horizon much lower, so the sky fills most of the frame).
+
+THE SCENE: a fresh, empty Roblox baseplate. The ground is a flat, perfectly level sand-coloured studded baseplate and the sky is a plain bright blue. Nothing else is in the image.
+
+GROUND
+- One warm, bright, saturated SAND colour (golden beige, like a sunny desert), the same colour everywhere. Not white, not grey, not brown, not orange.
+- The classic Roblox STUD SURFACE, not LEGO, exactly as in the attached image. The floor is divided into a tight, regular grid of small SQUARE stud tiles, edge to edge with no gaps. Each tile is a very shallow, slightly raised SQUARE with softly rounded corners, lit like the classic Roblox stud texture: a thin lighter edge on its top-left sides and a thin darker edge on its bottom-right sides.
+- The studs are tiny relative to the scene and almost flat, more like an embossed pattern than separate bumps. They read as a fine, even texture from a distance and blend into a smooth sand colour near the horizon.
+- NOT LEGO: no round studs, no cylinders, no discs, no circles, no tall bumps, no gaps of flat floor between studs.
+- Smooth matte plastic. No real sand grains, dunes, ripples, footprints, rocks, texture noise, seams, cracks or wear.
+- The ground runs flat all the way to a low, straight, perfectly horizontal horizon line about ONE FIFTH of the way up from the bottom of the frame. The sky fills the top four fifths.
+
+SKY
+- A plain, bright sky gradient: clear saturated blue at the top, fading to a lighter, paler blue near the horizon.
+- About ten to fourteen soft, rounded, puffy white cartoon clouds in a mix of sizes, like the attached image, spread through the taller sky: a loose band of bigger ones in the lower half of the sky, a few overlapping for depth, and several smaller ones drifting higher up. Plenty of clear blue stays open, especially across the middle and top, so large subjects can stand against plain sky.
+- No sun disc, no birds, no planes, no stars, no moon.
+
+LIGHTING
+- One warm sun from the upper left, plus soft ambient light from the sky.
+- Smooth, even light across the baseplate. Clean and cheerful, like a midday Roblox game.
+
+CAMERA
+- A low camera looking straight ahead across the baseplate, level, not tilted, close to the ground so the horizon sits low.
+- Wide view with the studs sharp from the foreground all the way to the horizon.
+
+STYLE
+- A premium, professionally rendered Roblox game scene: high detail, not low poly, with smooth curves and smooth shading everywhere.
+- Bold, vibrant, high-contrast colour. Not muted, grey or muddy.
+
+KEEP OUT
+- No characters, avatars, arms or people.
+- No objects: no rocks, cacti, trees, buildings, dunes, hills, mountains, fences, spawn pads, props or scenery of any kind.
+- No text, logos, UI or watermarks.
+- No bloom, god rays, haze, fog, depth-of-field blur, lens flares, vignettes, particles or chromatic aberration.
+
+SIZE AND SHAPE
+- 16:9 wide landscape, 1920 x 1080 pixels (or the closest 16:9 size), PNG.
+- The picture fills the whole frame edge to edge: no black bars, borders, frames or margins.
+
+FINAL CHECK: the image contains only a flat sand-coloured baseplate meeting a straight horizon about one fifth up from the bottom, a bright blue gradient sky filling the rest, and about ten to fourteen soft cartoon clouds of mixed sizes. Nothing else.
+The studs are tiny, shallow, rounded SQUARES packed edge to edge like the classic Roblox stud texture. If any stud is round, a cylinder or a LEGO stud, the image is wrong.
+```

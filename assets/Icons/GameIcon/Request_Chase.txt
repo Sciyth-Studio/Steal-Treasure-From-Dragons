@@ -1,0 +1,18 @@
+THE CHASE. The attached LAYOUT REFERENCE is our own earlier icon (version 1). Copy its composition closely: the hero running at the bottom left with the giant emerald held over his head, the angry blocky dragon flying in from the right, the speed lines, the sand ground, the camera and the sizes. Make ONLY these changes:
+
+A. A CLEAR GAP OF SKY between the gem and the dragon. The dragon's NEAR wing (the left one, toward the hero) is folded back and tucked BEHIND the dragon's body and head, so no part of the wing sits between the gem and the dragon's head. The dragon's far wing stays spread up and to the right, running off the right edge. The gem's green and the dragon's red never touch or overlap: a strip of blue sky separates them.
+
+B. THE GEM moves slightly DOWN and to the RIGHT, so its left tip and top stay well inside the square, clear of the top-left corner, which Roblox rounds off. It stays the biggest, brightest thing in the icon.
+
+C. HIS HANDS are rounded C-shaped Roblox hands, exactly as in the hand detail on the character sheet, curled around the bottom of the gem. Never fists, never fingers.
+
+Keep everything else as in version 1:
+1. THE BACON HAIR, bottom LEFT, running away from the dragon in an upright running stride toward the bottom-left corner, front foot reaching toward the camera, both arms straight up holding the gem over his head (arms as in the attached carry pose sheet). His face is exactly the attached face image (huge oval eyes, mouth stretched in panic), printed flat on his head, never the plain smile. Body, hair and clothes exactly as on the character sheet.
+2. THE GEM, upper LEFT, held over his head and much bigger than him: the giant EMERALD exactly as on the attached emerald sheet, upright, with a soft green glow and its thick dark-green outline.
+3. THE DRAGON, RIGHT half, running off the right edge, FLYING low after him, exactly as on the dragon sheet: blocky, red with printed stripes, cream belly, horns and claws, orange wings, heavy angry brows, yellow eyes, mouth open in a roar, cream claws reaching toward him. No fire.
+
+SPEED LINES: long white streaks in the sky, as in version 1.
+GROUND AND SKY: exactly the attached empty sand baseplate, with the horizon low so the sky fills most of the square. A small puff of sand dust behind the dragon is fine; nothing else in the background.
+No text.
+
+ATTACHED, IN ORDER: 1 the Bacon Hair character sheet, 2 his face, 3 the carry pose sheet, 4 the emerald sheet, 5 the dragon reference sheet, 6 the empty sand baseplate, 7 the layout reference (version 1 of this icon).

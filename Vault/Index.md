@@ -16,6 +16,8 @@ What Claude has learned while working on the game: preferences, references, gotc
 
 ## Project
 - [[Steal Treasure from Dragons]] — what the game is, repos, design source of truth
+- [[Game Plan]] — design source of truth: loop, zones, progression; open questions at the end
+- [[Roadmap]] — build order: architecture, gaps to settle, MVP phases 0-7 with checklists, then post-MVP
 - [[To Do]] — running task list
 
 ## Preferences
@@ -33,9 +35,15 @@ What Claude has learned while working on the game: preferences, references, gotc
 - [[Drop In Assets Over Ids In Code]] — asset lists read a Studio folder, not ids in config
 - [[Textured Attack Telegraphs]] — attack warnings use textures, never coloured Parts
 - [[Use Open Cloud Yourself]] — upload assets and create products through the Open Cloud key
+- [[Thumbnails Must Match The Game]] — hard rule: icons and thumbnails show only real mechanics and numbers
+- [[Bacon Hair In Marketing Art]] — the avatar in every icon and thumbnail is the Bacon Hair; studs only on the ground
+- [[Fresh Chat Per Thumbnail Run]] — image gen: a new chat per run with a revised full prompt, never follow-up edits
 
 ## Reference
 - [[Open Cloud Key]] — where the key lives, group id, upload and product endpoints
+- [[Icon And Thumbnail Pipeline]] — 2026-11-19 ChatGPT packs in `assets/Icons` (README lists attachments), dragon sheet first, the chase layout (angry dragon, speed lines, Bacon Hair fleeing with a giant emerald overhead)
+- [[Dragon Hoard Theme]] — the project's Claude app theme (tile-mosaic dragon over the sea, fire on commit), auto-loads from `.claude/skills/dragon-hoard`
+- [[Steal an Egg Monetization]] — 2026-11-19: two passes (X2 Money 299, X2 Growth 467) and a 12-tier Speed ladder of dev products (x2 for 3 R$ to x4K for 1,375); the model for our boost ladder
 
 ## Decisions
 

@@ -1,0 +1,13 @@
+
+=== FINAL CHECK, APPLIES TO EVERY IMAGE ===
+SQUARE 1:1, filled edge to edge, no border or rounded mask. The main action sits
+inside the central 80%.
+THE THUMBNAIL-OF-A-THUMBNAIL TEST: shrunk to 64 pixels and blurred, the hero, the
+dragon and the action still read in one second.
+The hero is the Bacon Hair exactly as on the character sheet, with rounded
+C-shaped Roblox hands and no fingers. The dragon is exactly as on the dragon sheet, blocky, never smooth or rounded.
+Every surface is smooth plastic with no raised bumps or repeating circles, except
+the square-studded baseplate ground and the studs on the dragon as on its sheet.
+HIGH DETAIL, NOT LOW POLY. No text unless the request quotes it.
+THE USER'S REQUEST WINS: everything here is a default for what the request leaves
+unspecified.

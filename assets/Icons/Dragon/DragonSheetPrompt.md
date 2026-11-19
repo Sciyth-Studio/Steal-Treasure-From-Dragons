@@ -1,0 +1,29 @@
+# Dragon reference sheet
+
+Every icon and thumbnail attaches this sheet so the dragon looks the same in all of them, the way Chop a Rock attached each Pet's six-view sheet. Fresh ChatGPT chat, no attachments, save the keeper as `Dragon/DragonSheet.webp`, and approve the design before the final runs.
+
+**Blocky** (user, 2026-11-19): built from chunky rectangular blocks like the blocky T-rex in the thumbnail layout reference, which also fits a stud-style game. The design is a draft for the marketing hero dragon; whatever is approved here is what the zone 1 dragon has to look like in game ([[Thumbnails Must Match The Game]]).
+
+```text
+Create a character reference sheet for a Roblox game's hero dragon, on a plain light grey background, in the style of a professional 3D turnaround sheet.
+
+LAYOUT: a 16:9 sheet. Top row, five full-body views of the SAME dragon standing on all fours, evenly spaced and the same size: FRONT, THREE-QUARTER, SIDE, REAR THREE-QUARTER, BACK. Bottom row, four panels: ASLEEP (lying down with its head resting on its front feet, eyes shut, a puff of smoke from one nostril), ROARING AWAKE (rearing up, wings spread wide, mouth open), FLYING CHASE (three-quarter front view, swooping forward through the air toward the camera, wings spread wide, angry brows, mouth open in a roar), BREATHING FIRE (side view, a thick stream of bright orange-yellow fire from its mouth). Small grey labels under each view. No other text.
+
+BLOCKY CONSTRUCTION: the dragon is a BLOCKY Roblox model, built entirely from chunky rectangular blocks and wedges, like a toy made of building blocks or a classic blocky Roblox creature.
+- Every part is a box or wedge with flat faces, straight edges and right-angled corners. Each edge is softly bevelled and catches a thin highlight, so it looks like polished plastic, not raw voxels.
+- No round, organic or curved shapes anywhere: no round belly, no curved neck, no rounded snout, no tapering cones. Curves are suggested by stepping several blocks at angles.
+- The surfaces are smooth and flat: NO studs, no bumps, no scale texture, no grain. Pattern is PRINTED flat onto the blocks.
+
+THE DRAGON: a big, chunky dragon for a game played by young kids. Angry and menacing enough to run from, never gory or realistic.
+- HEAD: a big long rectangular box head with a long flat box snout and a square jaw. A row of chunky white triangular block teeth along the edge of the mouth. Two square nostrils. Big square yellow eyes with a black slit pupil, under heavy, angled, angry block brows. Two big horns, each made of two or three stepped cream blocks sweeping back.
+- BODY: a long, heavy box torso, deep and wide, with a lighter belly panel printed along the underside. A thick neck of two or three angled box segments.
+- LEGS: four short, thick box legs with square feet, each with three chunky cream wedge claws.
+- TAIL: a long tail of box segments getting smaller toward the end, finishing in a flat wedge spade tip.
+- WINGS: two big wings, each a few long rectangular bone bars with flat, angular wing panels stretched between them, folded on its back in the turnaround views.
+- SPIKES: a row of cream wedge spikes along its back and tail.
+- COLOURS: a deep, saturated RED body with darker red stripes printed across its back and tail, a warm cream-yellow belly panel, cream horns, claws, spikes and teeth, darker red-orange wing panels.
+
+STYLE: a premium, professionally rendered Roblox game model: high detail, crisp bevelled block edges, smooth plastic surfaces with clean gradients and soft shading. One soft key light, soft contact shadows. The same model in every view.
+
+Do not output an explanation. Generate the sheet.
+```
